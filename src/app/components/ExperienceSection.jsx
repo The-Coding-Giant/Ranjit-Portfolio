@@ -54,7 +54,7 @@ const ExperienceSection = () => {
             }`}
           >
             <div
-              className={`absolute top-6 w-4 h-4 rounded-full bg-[#121212] border-2 border-primary-500 z-10 ${
+              className={`absolute top-6 w-4 h-4 rounded-full bg-[#0e0b14] border-2 border-primary-500 z-10 ${
                 index % 2 === 0
                   ? "left-[-8px] md:left-auto md:right-[-8px]"
                   : "left-[-8px]"
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
             </div>
 
             <div className="ml-8 md:ml-0">
-              <div className="bg-[#181818] border border-[#33353F] rounded-2xl p-6 transition-all duration-300 relative overflow-hidden">
+              <div className="bg-[#1a1624] border border-[#2f2838] rounded-2xl p-6 transition-all duration-300 relative overflow-hidden">
                 <div className="relative z-10">
                   <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-primary-500/10 text-primary-400 mb-3">
                     {exp.year}

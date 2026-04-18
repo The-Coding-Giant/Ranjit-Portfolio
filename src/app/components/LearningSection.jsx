@@ -43,7 +43,7 @@ const LearningSection = () => {
         {learningTracks.map((track, index) => (
           <div
             key={index}
-            className="bg-[#181818] border border-[#33353F] rounded-2xl p-6"
+            className="bg-[#1a1624] border border-[#2f2838] rounded-2xl p-6"
           >
             <h3 className="text-xl font-semibold text-white mb-3">{track.title}</h3>
             <p className="text-[#8892A0] leading-relaxed">{track.description}</p>

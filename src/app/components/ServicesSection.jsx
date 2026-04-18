@@ -66,7 +66,7 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <div key={index} className="group relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500/15 to-secondary-500/15 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-            <div className="relative bg-[#181818] border border-[#33353F] rounded-2xl p-8 hover:border-primary-500/40 transition-all duration-300 h-full">
+            <div className="relative bg-[#1a1624] border border-[#2f2838] rounded-2xl p-8 hover:border-primary-500/40 transition-all duration-300 h-full">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-500/20 flex items-center justify-center mb-6">
                 <service.icon className="w-7 h-7 text-primary-400" />
               </div>

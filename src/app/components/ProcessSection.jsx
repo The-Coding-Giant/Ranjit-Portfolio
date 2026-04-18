@@ -26,30 +26,38 @@ const steps = [
 const ProcessSection = () => {
   return (
     <section className="py-24" id="process">
-      <div className="text-center mb-16">
-        <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
-          How I work
-        </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
-          Simple, Reliable Process
-        </h2>
-      </div>
+      <div className="grid lg:grid-cols-[0.8fr,1.2fr] gap-12 items-start">
+        <div>
+          <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
+            How I work
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
+            Simple, Reliable Process
+          </h2>
+          <p className="text-[#94A3B8] mt-4">
+            A lightweight process that keeps the work focused, collaborative, and
+            easy to review at every stage.
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="bg-[#181818] border border-[#33353F] rounded-2xl p-6"
-          >
-            <div className="w-10 h-10 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mb-4 text-primary-400 font-semibold">
-              {String(index + 1).padStart(2, "0")}
+        <div className="relative pl-6 border-l border-[#2f2838] space-y-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-8 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300 text-sm flex items-center justify-center">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+              </div>
+              <p className="text-[#8892A0] text-sm leading-relaxed">
+                {step.description}
+              </p>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-            <p className="text-[#8892A0] text-sm leading-relaxed">
-              {step.description}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

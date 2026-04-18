@@ -28,21 +28,20 @@ const quickFacts = [
 const AboutSection = () => {
   return (
     <section className="py-24" id="about">
-      <div className="text-center mb-16">
-        <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
-          Get to know me
-        </span>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
-          About Me
-        </h2>
-      </div>
+      <div className="grid lg:grid-cols-[0.9fr,1.1fr] gap-12 items-start">
+        <div className="space-y-8">
+          <div>
+            <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
+              Get to know me
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-2">
+              About Me
+            </h2>
+          </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 rounded-2xl transform rotate-2"></div>
-          <div className="relative bg-[#181818] rounded-2xl p-8 border border-[#33353F]">
+          <div className="rounded-3xl bg-[#1a1624] border border-[#2f2838] p-8">
             <p className="text-[#ADB7BE] text-lg leading-relaxed mb-6">
-              I am Divyanshu Sharma, an aspiring software developer who enjoys turning
+              I am Anirudh Gangwar, an aspiring software developer who enjoys turning
               ideas into reliable, user-friendly web experiences. I focus on strong
               fundamentals, responsive UI, and consistent delivery.
             </p>
@@ -50,27 +49,30 @@ const AboutSection = () => {
               My goal is to build products that are thoughtful and easy to use while
               continuously improving my skills through real projects and collaboration.
             </p>
+          </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8 pt-8 border-t border-[#33353F]">
-              {quickFacts.map((fact, index) => (
-                <div
-                  key={index}
-                  className="text-sm text-[#8892A0] p-4 rounded-xl bg-[#121212] border border-[#33353F]/50"
-                >
-                  {fact}
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-3">
+            {quickFacts.map((fact, index) => (
+              <div
+                key={index}
+                className="text-sm text-[#8892A0] px-4 py-3 rounded-full bg-[#0e0b14] border border-[#2f2838]/60"
+              >
+                {fact}
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="text-white">
-          <div className="grid gap-6">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="bg-[#181818] rounded-2xl p-6 border border-[#33353F]"
-              >
+        <div className="space-y-6">
+          {highlights.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-2xl border border-[#2f2838] bg-[#1a1624] p-6 flex gap-6"
+            >
+              <div className="text-primary-300 text-lg font-semibold">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+              <div>
                 <h3 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
                 </h3>
@@ -78,8 +80,8 @@ const AboutSection = () => {
                   {item.description}
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

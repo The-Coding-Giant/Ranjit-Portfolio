@@ -21,25 +21,21 @@ const achievementsList = [
 
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-8 md:px-16 flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-[#181818] to-[#1a1a2e]">
+    <section className="py-20">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {achievementsList.map((achievement, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+              className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6 text-center"
             >
-              <h2 className="text-white text-4xl font-bold">
-                {achievement.value}
-              </h2>
-              <p className="text-[#ADB7BE] text-base text-center">
-                {achievement.metric}
-              </p>
+              <p className="text-3xl font-bold text-white">{achievement.value}</p>
+              <p className="text-[#ADB7BE] text-sm mt-2">{achievement.metric}</p>
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

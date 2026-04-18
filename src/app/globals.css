@@ -3,21 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 244, 244, 245;
-  --background-rgb: 10, 12, 16;
-  --background-accent: 16, 21, 34;
+  --foreground-rgb: 245, 243, 255;
+  --background-rgb: 14, 11, 20;
+  --background-accent: 34, 22, 48;
+  --background-accent-2: 20, 36, 54;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: radial-gradient(
-      1200px circle at 10% 10%,
-      rgba(var(--background-accent), 0.6),
-      transparent 50%
+      1200px circle at 12% 10%,
+      rgba(var(--background-accent), 0.7),
+      transparent 52%
     ),
     radial-gradient(
-      1200px circle at 90% 20%,
-      rgba(12, 25, 24, 0.5),
+      1100px circle at 88% 18%,
+      rgba(var(--background-accent-2), 0.6),
       transparent 55%
     ),
     rgb(var(--background-rgb));
@@ -30,31 +31,31 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f16;
+  background: #0f0b16;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #0ea5a4, #f59e0b);
+  background: linear-gradient(to bottom, #fb7185, #38bdf8);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #14b8a6, #fbbf24);
+  background: linear-gradient(to bottom, #f43f5e, #0ea5e9);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(20, 184, 166, 0.3);
+  background: rgba(244, 114, 182, 0.35);
   color: #fff;
 }
 
 /* Glow effects */
 .glow-cyan {
-  box-shadow: 0 0 32px rgba(20, 184, 166, 0.25);
+  box-shadow: 0 0 32px rgba(244, 114, 182, 0.25);
 }
 
 .glow-text {
-  text-shadow: 0 0 24px rgba(20, 184, 166, 0.35);
+  text-shadow: 0 0 24px rgba(244, 114, 182, 0.35);
 }
 
 /* Animated gradient border */
@@ -71,7 +72,7 @@ body {
 }
 
 .animated-gradient {
-  background: linear-gradient(270deg, #06b6d4, #10b981, #06b6d4);
+  background: linear-gradient(270deg, #f43f5e, #38bdf8, #f43f5e);
   background-size: 200% 200%;
   animation: gradient-rotate 3s ease infinite;
 }
@@ -113,8 +114,8 @@ body {
 /* Grid pattern background */
 .grid-pattern {
   background-image: 
-    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(244, 114, 182, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -129,7 +130,7 @@ html {
 }
 
 *:focus-visible {
-  outline: 2px solid rgba(6, 182, 212, 0.5);
+  outline: 2px solid rgba(244, 114, 182, 0.5);
   outline-offset: 2px;
 }
 

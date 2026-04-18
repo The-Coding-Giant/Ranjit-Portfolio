@@ -84,7 +84,7 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="group relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-      <div className="relative bg-[#181818] border border-[#33353F] rounded-2xl overflow-hidden hover:border-primary-500/30 transition-all duration-500">
+      <div className="relative bg-[#1a1624] border border-[#2f2838] rounded-2xl overflow-hidden hover:border-primary-500/30 transition-all duration-500">
         <div className="h-48 bg-gradient-to-br from-primary-900/20 to-secondary-900/20 flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 grid-pattern opacity-30"></div>
           <div className="text-6xl font-bold text-primary-500/20">
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
   const tags = ["All", "Web", "UI", "Data"];
 
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col bg-transparent">
       <Navbar />
       <div className="container mt-24 mx-auto px-6 sm:px-12 py-4">
         <section className="py-16">
@@ -165,7 +165,7 @@ export default function ProjectsPage() {
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   tag === tagName
                     ? "bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg shadow-primary-500/25"
-                    : "bg-[#181818] border border-[#33353F] text-[#8892A0] hover:border-primary-500/50 hover:text-white"
+                    : "bg-[#1a1624] border border-[#2f2838] text-[#8892A0] hover:border-primary-500/50 hover:text-white"
                 }`}
               >
                 {tagName}
@@ -180,7 +180,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="py-16 border-t border-[#33353F]">
+        <section className="py-16 border-t border-[#2f2838]">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Interested in collaboration?
