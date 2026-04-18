@@ -1,64 +1,40 @@
-"use client";
 import React from "react";
-import dynamic from "next/dynamic";
-
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
 
 const achievementsList = [
   {
-    metric: "Security Audits",
-    value: "50",
-    postfix: "+",
+    metric: "Projects Built",
+    value: "12+",
   },
   {
-    metric: "Vulnerabilities Discovered",
-    value: "100",
-    postfix: "+",
-  },
-  {
-    metric: "Certifications",
-    value: "4",
-  },
-  {
-    metric: "Years Experience",
+    metric: "Tech Domains",
     value: "5",
-    postfix: "+",
+  },
+  {
+    metric: "Practice Hours",
+    value: "100+",
+  },
+  {
+    metric: "Open to Roles",
+    value: "2026",
   },
 ];
 
 const AchievementsSection = () => {
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-[#181818] to-[#1a1a2e]">
+      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-8 md:px-16 flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-[#181818] to-[#1a1a2e]">
         {achievementsList.map((achievement, index) => {
           return (
             <div
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
-                {achievement.postfix}
+              <h2 className="text-white text-4xl font-bold">
+                {achievement.value}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="text-[#ADB7BE] text-base text-center">
+                {achievement.metric}
+              </p>
             </div>
           );
         })}

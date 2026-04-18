@@ -3,24 +3,27 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
+    title: "Home",
+    path: "/",
+  },
+  {
     title: "About",
-    path: "/#about",
+    path: "/about-us",
+  },
+  // {
+  //   title: "Projects",
+  //   path: "/projects",
+  // },
+  {
+    title: "Cybersecurity",
+    path: "/cybersecurity-awareness",
   },
   {
-    title: "Services",
-    path: "/#services",
-  },
-  {
-    title: "Projects",
-    path: "/projects",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
+    title: "Contact Us",
+    path: "/contact-us",
   },
 ];
 
@@ -48,7 +51,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-4">
           <Link href={"/"} className="text-2xl font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-500">
-              NKY
+              DS
             </span>
           </Link>
 
@@ -57,10 +60,10 @@ const Navbar = () => {
               <NavLink key={index} href={link.path} title={link.title} />
             ))}
             <Link
-              href="/contact"
+              href="/contact-us"
               className="ml-4 px-5 py-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-sm font-medium hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
             >
-              Hire Me
+              Let&apos;s Talk
             </Link>
           </div>
 
@@ -98,11 +101,11 @@ const Navbar = () => {
             ))}
             <li>
               <Link
-                href="/contact"
+                href="/contact-us"
                 onClick={() => setNavbarOpen(false)}
                 className="block py-3 px-4 mt-2 text-center rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium"
               >
-                Hire Me
+                Let&apos;s Talk
               </Link>
             </li>
           </ul>

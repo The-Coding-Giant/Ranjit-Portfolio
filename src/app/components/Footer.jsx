@@ -9,12 +9,12 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link href="/" className="text-2xl font-bold inline-block mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-500">
-                NKY
+                DS
               </span>
             </Link>
             <p className="text-[#8892A0] max-w-sm leading-relaxed">
-              Cybersecurity professional dedicated to protecting digital assets and 
-              infrastructure through proactive security measures.
+              Aspiring software developer focused on clean UI, reliable code, and
+              thoughtful user experiences.
             </p>
           </div>
 
@@ -37,8 +37,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#8892A0] hover:text-primary-400 transition-colors duration-300">
+                <Link href="/contact-us" className="text-[#8892A0] hover:text-primary-400 transition-colors duration-300">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/cybersecurity-awareness" className="text-[#8892A0] hover:text-primary-400 transition-colors duration-300">
+                  Cyber Safety
                 </Link>
               </li>
             </ul>
@@ -85,7 +90,7 @@ const Footer = () => {
           <p className="text-[#8892A0] text-sm">
             Designed and built by{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-500 font-medium">
-              Neeraj Kumar Yogi
+              Divyanshu Sharma
             </span>
           </p>
           <p className="text-[#6B7280] text-sm">

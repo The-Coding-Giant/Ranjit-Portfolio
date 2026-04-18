@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,87 +8,81 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 const projectsData = [
   {
     id: 1,
-    title: "Vulnerability Scanner",
+    title: "Portfolio Website",
     description:
-      "Automated vulnerability scanning tool built with Python that identifies security weaknesses in web applications and generates detailed reports.",
-    tag: ["All", "Tools"],
+      "A clean portfolio built with responsive sections, project filtering, and polished UI.",
+    tag: ["All", "Web"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "Nmap", "SQLite"],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 2,
-    title: "Network Traffic Analyzer",
+    title: "Task Tracker",
     description:
-      "Real-time network packet analysis tool for detecting suspicious activities and potential intrusion attempts.",
-    tag: ["All", "Tools"],
+      "CRUD task manager with filters, status badges, and local storage persistence.",
+    tag: ["All", "Web"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "Scapy", "Wireshark"],
+    technologies: ["React", "CSS", "LocalStorage"],
   },
   {
     id: 3,
-    title: "Phishing Detection System",
+    title: "Movie Explorer",
     description:
-      "Machine learning-based system that analyzes URLs and email content to detect phishing attempts with high accuracy.",
-    tag: ["All", "Security"],
+      "Search and browse movies with API integration and responsive cards.",
+    tag: ["All", "Web"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "TensorFlow", "NLP"],
+    technologies: ["JavaScript", "API", "UI"],
   },
   {
     id: 4,
-    title: "Security Dashboard",
+    title: "SQL Practice Dashboard",
     description:
-      "Comprehensive security monitoring dashboard that aggregates data from multiple sources for SOC operations.",
-    tag: ["All", "Web"],
+      "Interface for running sample SQL queries and viewing results cleanly.",
+    tag: ["All", "Data"],
     gitUrl: "https://github.com",
-    technologies: ["React", "Node.js", "Elasticsearch"],
+    technologies: ["SQL", "Tables", "Filters"],
   },
   {
     id: 5,
-    title: "Password Strength Analyzer",
+    title: "Weather App",
     description:
-      "Tool that evaluates password strength using entropy calculation and checks against known breach databases.",
-    tag: ["All", "Tools"],
+      "Real-time weather search with saved locations and unit toggles.",
+    tag: ["All", "Web"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "API Integration", "Hashing"],
+    technologies: ["JavaScript", "API", "CSS"],
   },
   {
     id: 6,
-    title: "Malware Analysis Sandbox",
+    title: "Auth UI Kit",
     description:
-      "Isolated environment for safely analyzing suspicious files and understanding malware behavior patterns.",
-    tag: ["All", "Security"],
+      "Reusable authentication screens with clean layouts and validation states.",
+    tag: ["All", "UI"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "Docker", "YARA"],
+    technologies: ["UI", "Forms", "UX"],
   },
   {
     id: 7,
-    title: "Incident Response Toolkit",
+    title: "Expense Tracker",
     description:
-      "Collection of scripts and tools for rapid incident response, evidence collection, and forensic analysis.",
-    tag: ["All", "Tools"],
+      "Simple expense tracking app with charts and category filters.",
+    tag: ["All", "Web"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "PowerShell", "Bash"],
+    technologies: ["React", "Charts", "State"],
   },
   {
     id: 8,
-    title: "Cloud Security Scanner",
+    title: "Study Planner",
     description:
-      "Tool for continuous monitoring and assessment of cloud infrastructure security across AWS, Azure, and GCP.",
-    tag: ["All", "Security"],
+      "Schedule planner with weekly views and progress reminders.",
+    tag: ["All", "UI"],
     gitUrl: "https://github.com",
-    technologies: ["Python", "Terraform", "Cloud APIs"],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="group relative"
-    >
+    <div className="group relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
       <div className="relative bg-[#181818] border border-[#33353F] rounded-2xl overflow-hidden hover:border-primary-500/30 transition-all duration-500">
         <div className="h-48 bg-gradient-to-br from-primary-900/20 to-secondary-900/20 flex items-center justify-center relative overflow-hidden">
@@ -130,7 +123,7 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -141,19 +134,14 @@ export default function ProjectsPage() {
     project.tag.includes(tag)
   );
 
-  const tags = ["All", "Tools", "Security", "Web"];
+  const tags = ["All", "Web", "UI", "Data"];
 
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
       <div className="container mt-24 mx-auto px-6 sm:px-12 py-4">
         <section className="py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
               Portfolio
             </span>
@@ -164,18 +152,12 @@ export default function ProjectsPage() {
               </span>
             </h1>
             <p className="text-[#8892A0] max-w-2xl mx-auto">
-              A collection of cybersecurity tools, research projects, and
-              applications I have developed to solve real-world security
-              challenges.
+              A collection of practice builds and UI-focused projects that show
+              how I think, design, and ship.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-3 mb-12"
-          >
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             {tags.map((tagName) => (
               <button
                 key={tagName}
@@ -189,37 +171,30 @@ export default function ProjectsPage() {
                 {tagName}
               </button>
             ))}
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>
 
         <section className="py-16 border-t border-[#33353F]">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Interested in collaboration?
             </h2>
             <p className="text-[#8892A0] mb-8 max-w-lg mx-auto">
-              I am always open to discussing new security projects and research
-              opportunities.
+              I am open to internships, freelance work, and collaborative projects.
             </p>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-medium hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
             >
               Get in Touch
             </Link>
-          </motion.div>
+          </div>
         </section>
       </div>
       <Footer />

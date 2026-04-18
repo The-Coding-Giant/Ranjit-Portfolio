@@ -1,64 +1,56 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion";
 import {
-  ShieldCheckIcon,
-  MagnifyingGlassIcon,
-  ServerStackIcon,
-  LockClosedIcon,
-  BugAntIcon,
-  CloudIcon,
+  CodeBracketIcon,
+  WindowIcon,
+  CircleStackIcon,
+  Squares2X2Icon,
+  WrenchScrewdriverIcon,
+  RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
 
 const services = [
   {
-    title: "Penetration Testing",
+    title: "Frontend Development",
     description:
-      "Comprehensive security assessments to identify vulnerabilities before attackers do.",
-    icon: BugAntIcon,
+      "Responsive, accessible interfaces using HTML, CSS, JavaScript, and React.",
+    icon: WindowIcon,
   },
   {
-    title: "Security Audits",
+    title: "UI Implementation",
     description:
-      "Thorough evaluation of your security posture, policies, and procedures.",
-    icon: MagnifyingGlassIcon,
+      "Convert designs into clean, reusable components with a strong eye for layout.",
+    icon: Squares2X2Icon,
   },
   {
-    title: "Incident Response",
+    title: "API Integration",
     description:
-      "Rapid response to security breaches with forensic analysis and recovery.",
-    icon: ShieldCheckIcon,
+      "Connect frontend experiences with REST APIs and handle real-world data states.",
+    icon: CodeBracketIcon,
   },
   {
-    title: "Network Security",
+    title: "Database Basics",
     description:
-      "Design and implementation of robust network security architectures.",
-    icon: ServerStackIcon,
+      "Design and query relational data with SQL for simple, reliable backends.",
+    icon: CircleStackIcon,
   },
   {
-    title: "Cloud Security",
+    title: "Debugging & Fixes",
     description:
-      "Securing cloud environments across AWS, Azure, and GCP platforms.",
-    icon: CloudIcon,
+      "Track issues, improve UX details, and ship stable updates with confidence.",
+    icon: WrenchScrewdriverIcon,
   },
   {
-    title: "Security Training",
+    title: "Performance Focus",
     description:
-      "Employee awareness training and phishing simulations for teams.",
-    icon: LockClosedIcon,
+      "Keep pages fast, responsive, and optimized for mobile-first experiences.",
+    icon: RocketLaunchIcon,
   },
 ];
 
 const ServicesSection = () => {
   return (
     <section className="py-24" id="services">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
+      <div className="text-center mb-16">
         <span className="text-primary-400 text-sm font-medium tracking-widest uppercase">
           What I offer
         </span>
@@ -66,31 +58,24 @@ const ServicesSection = () => {
           Services
         </h2>
         <p className="text-[#8892A0] mt-4 max-w-xl mx-auto">
-          Comprehensive cybersecurity services to protect your organization from evolving threats
+          Practical web development support built around clarity, responsiveness, and clean code.
         </p>
-      </motion.div>
+      </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
-            className="group relative"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-            <div className="relative bg-[#181818] border border-[#33353F] rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-500 h-full">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-primary-500/50 transition-all duration-500">
+          <div key={index} className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-500/15 to-secondary-500/15 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+            <div className="relative bg-[#181818] border border-[#33353F] rounded-2xl p-8 hover:border-primary-500/40 transition-all duration-300 h-full">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/10 to-secondary-500/10 border border-primary-500/20 flex items-center justify-center mb-6">
                 <service.icon className="w-7 h-7 text-primary-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary-400 transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 {service.title}
               </h3>
               <p className="text-[#8892A0] leading-relaxed">{service.description}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
