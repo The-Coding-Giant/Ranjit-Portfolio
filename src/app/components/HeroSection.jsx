@@ -43,12 +43,12 @@ const HeroSection = () => {
               <span className="relative z-10">Get In Touch</span>
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-secondary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
-            <Link
+            {/* <Link
               href="/projects"
               className="px-8 py-4 rounded-full border border-[#2f2838] text-white font-medium hover:border-primary-500/50 hover:bg-primary-500/5 transition-all duration-300"
             >
               View Projects
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-sm text-[#94A3B8]">
