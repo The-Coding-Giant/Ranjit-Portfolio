@@ -27,7 +27,7 @@ const AchievementsSection = () => {
           return (
             <div
               key={index}
-              className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6 text-center"
+              className="glass-panel rounded-2xl p-6 text-center ring-1 ring-white/10"
             >
               <p className="text-3xl font-bold text-white">{achievement.value}</p>
               <p className="text-[#ADB7BE] text-sm mt-2">{achievement.metric}</p>

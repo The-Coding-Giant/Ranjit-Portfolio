@@ -1,33 +1,29 @@
 import React from "react";
 
 const coreSkills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "SQL",
+  "Excel",
+  "Power BI",
   "Python",
-  "React",
-  "Next.js",
-  "Git & GitHub",
+  "SQL",
+  "AI & ML",
 ];
 
 const focusAreas = [
-  "Responsive UI implementation",
-  "Component-based architecture",
-  "API integration",
-  "Database fundamentals",
-  "Clean code practices",
-  "Basic testing and debugging",
+  "Data cleaning and analysis workflows",
+  "Dashboard design and storytelling",
+  "SQL querying and database fundamentals",
+  "Python automation and scripting",
+  "Model basics and AI/ML concepts",
 ];
 
 const tooling = [
-  "VS Code",
-  "Figma (handoffs)",
-  "Postman",
-  "Vercel",
-  "Netlify",
+  "Excel",
+  "Power BI",
+  "Python",
   "MySQL",
-  "GitHub Projects",
+  "Jupyter Notebook",
+  "VS Code",
+  "Git & GitHub",
 ];
 
 const SkillsSection = () => {
@@ -49,13 +45,13 @@ const SkillsSection = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
-        <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6">
+        <div className="glass-panel rounded-2xl p-6 ring-1 ring-white/10">
           <h3 className="text-lg font-semibold text-white mb-4">Core Skills</h3>
           <div className="flex flex-wrap gap-3">
             {coreSkills.map((skill, index) => (
               <span
                 key={index}
-                className="px-3 py-2 rounded-full bg-[#0e0b14] border border-[#2f2838] text-[#E2E8F0] text-sm"
+                className="px-3 py-2 rounded-full glass-panel text-[#E2E8F0] text-sm ring-1 ring-white/10"
               >
                 {skill}
               </span>
@@ -63,7 +59,7 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6">
+        <div className="glass-panel rounded-2xl p-6 ring-1 ring-white/10">
           <h3 className="text-lg font-semibold text-white mb-4">Focus Areas</h3>
           <div className="space-y-4">
             {focusAreas.map((area, index) => (
@@ -77,13 +73,13 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6">
+        <div className="glass-panel rounded-2xl p-6 ring-1 ring-white/10">
           <h3 className="text-lg font-semibold text-white mb-4">Tools I Use</h3>
           <div className="space-y-3">
             {tooling.map((tool, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between rounded-xl bg-[#0e0b14] border border-[#2f2838] px-4 py-3 text-[#ADB7BE]"
+                className="flex items-center justify-between rounded-xl glass-panel px-4 py-3 text-[#ADB7BE] ring-1 ring-white/10"
               >
                 <span>{tool}</span>
                 <span className="text-primary-300 text-xs">Everyday</span>

@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0e0b14]/95 backdrop-blur-md border-b border-[#2f2838]"
+          ? "bg-white/5 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-4">
           <Link href={"/"} className="text-2xl font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-500">
-              AG
+              RK
             </span>
           </Link>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
-            className="md:hidden w-10 h-10 rounded-lg bg-[#1a1624] border border-[#2f2838] flex items-center justify-center text-white hover:border-primary-500/50 transition-colors duration-300"
+            className="md:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-primary-500/50 transition-colors duration-300"
           >
             {navbarOpen ? (
               <XMarkIcon className="h-5 w-5" />
@@ -86,14 +86,14 @@ const Navbar = () => {
           navbarOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-[#0e0b14]/95 backdrop-blur-md border-t border-[#2f2838] px-6 py-4">
+        <div className="bg-[#0b121e]/95 backdrop-blur-xl border-t border-white/10 px-6 py-4">
           <ul className="space-y-2">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.path}
                   onClick={() => setNavbarOpen(false)}
-                  className="block py-3 px-4 text-[#ADB7BE] hover:text-white hover:bg-[#1a1624] rounded-lg transition-all duration-300"
+                  className="block py-3 px-4 text-[#ADB7BE] hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
                 >
                   {link.title}
                 </Link>

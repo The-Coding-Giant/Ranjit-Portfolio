@@ -25,21 +25,21 @@ const EmailSection = () => {
 
       <div className="grid lg:grid-cols-[1.1fr,0.9fr] gap-10 relative z-10">
         <div className="grid sm:grid-cols-2 gap-6">
-          <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6">
+          <div className="glass-panel rounded-2xl p-6 ring-1 ring-white/10">
             <p className="text-xs uppercase tracking-[0.3em] text-[#94A3B8]">Email</p>
-            <p className="text-white text-lg mt-3">gangwar.ag18@gmail.com</p>
+            <p className="text-white text-lg mt-3">ranjitkumar01324@gmail.com</p>
           </div>
-          <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6">
+          <div className="glass-panel rounded-2xl p-6 ring-1 ring-white/10">
             <p className="text-xs uppercase tracking-[0.3em] text-[#94A3B8]">Mobile</p>
-            <p className="text-white text-lg mt-3">7240497240</p>
+            <p className="text-white text-lg mt-3">9334500204</p>
           </div>
-          <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6 sm:col-span-2">
+          <div className="glass-panel rounded-2xl p-6 sm:col-span-2 ring-1 ring-white/10">
             <p className="text-xs uppercase tracking-[0.3em] text-[#94A3B8]">Location</p>
             <p className="text-white text-lg mt-3">India</p>
           </div>
         </div>
 
-        <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-8 flex flex-col justify-between">
+        <div className="glass-panel rounded-2xl p-8 flex flex-col justify-between ring-1 ring-white/10">
           <div>
             <h4 className="text-2xl font-semibold text-white mb-3">
               Ready to collaborate?

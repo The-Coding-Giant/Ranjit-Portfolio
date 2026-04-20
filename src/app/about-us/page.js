@@ -39,13 +39,13 @@ export default function AboutUsPage() {
                 About me
               </span>
               <h1 className="text-4xl md:text-6xl font-bold text-white">
-                Anirudh Gangwar
+                Ranjit Kumar
               </h1>
               <p className="text-[#8892A0] max-w-2xl">
                 Aspiring software developer focused on building thoughtful, reliable,
                 and user-friendly web experiences.
               </p>
-              <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-8">
+              <div className="glass-panel rounded-2xl p-8">
                 <h2 className="text-2xl font-semibold text-white mb-4">My Story</h2>
                 <p className="text-[#ADB7BE] leading-relaxed mb-4">
                   I am passionate about turning ideas into real products. I enjoy
@@ -63,7 +63,7 @@ export default function AboutUsPage() {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="rounded-2xl border border-[#2f2838] bg-[#1a1624] p-6"
+                  className="glass-panel rounded-2xl p-6"
                 >
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {value.title}
@@ -91,7 +91,7 @@ export default function AboutUsPage() {
             {focusAreas.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 bg-[#1a1624] border border-[#2f2838] rounded-xl p-4"
+                className="glass-panel rounded-xl p-4 flex items-start gap-3"
               >
                 <span className="w-2 h-2 mt-2 rounded-full bg-gradient-to-r from-primary-400 to-secondary-400"></span>
                 <p className="text-[#ADB7BE]">{item}</p>

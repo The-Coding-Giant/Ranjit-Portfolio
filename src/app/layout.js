@@ -4,7 +4,7 @@ import { Space_Grotesk } from "next/font/google";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Anirudh Gangwar | Aspiring Software Developer",
+  title: "Ranjit Kumar | Aspiring Software Developer",
   description:
     "Aspiring software developer focused on building clean, reliable, and user-friendly web experiences.",
   keywords: [
@@ -15,9 +15,9 @@ export const metadata = {
     "javascript",
     "react",
   ],
-  authors: [{ name: "Anirudh Gangwar" }],
+  authors: [{ name: "Ranjit Kumar" }],
   openGraph: {
-    title: "Anirudh Gangwar | Aspiring Software Developer",
+    title: "Ranjit Kumar | Aspiring Software Developer",
     description:
       "Aspiring software developer focused on building clean, reliable, and user-friendly web experiences.",
     type: "website",

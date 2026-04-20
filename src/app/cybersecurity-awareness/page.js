@@ -46,11 +46,12 @@ export default function CybersecurityAwarenessPage() {
             <p className="text-[#8892A0] max-w-2xl mx-auto mt-4">
               A practical, student-friendly guide to staying safe online. These tips
               cover everyday situations like logging into accounts, browsing for
-              study material, and protecting personal information.
+              study material, and protecting personal information across apps.
             </p>
             <p className="text-[#94A3B8] max-w-2xl mx-auto mt-3">
-              Use this as a simple checklist whenever you create accounts, use public
-              Wi-Fi, or share content on social platforms.
+              Use this as a quick checklist whenever you create accounts, use public
+              Wi-Fi, or share content on social platforms. Small habits make a big
+              difference over time.
             </p>
           </div>
 
@@ -58,7 +59,8 @@ export default function CybersecurityAwarenessPage() {
             <h2 className="text-2xl font-semibold text-white mb-2">Include:</h2>
             <p className="text-[#94A3B8] mb-6">
               Each point below explains what to do and why it matters in real-world
-              student scenarios.
+              student scenarios. Keep it handy during exams, placements, and online
+              transactions.
             </p>
             <div className="space-y-5">
               {tips.map((tip, index) => (
@@ -72,6 +74,13 @@ export default function CybersecurityAwarenessPage() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-4">
+              <p className="text-[#94A3B8] text-sm">
+                Quick response tip: If you suspect a scam, stop responding, change
+                your passwords, enable two factor authentication, and inform the
+                relevant service or bank immediately.
+              </p>
             </div>
           </div>
         </section>

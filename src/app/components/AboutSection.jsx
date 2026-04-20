@@ -19,8 +19,8 @@ const highlights = [
 ];
 
 const quickFacts = [
-  "Focused on HTML, CSS, JavaScript, SQL, and Python",
-  "Interested in frontend engineering and UI craft",
+  "Focused on Excel, Power BI, SQL, Python, and AI/ML",
+  "Interested in data insights and practical analytics",
   "Open to internships and entry-level roles",
   "Based in India, available remotely",
 ];
@@ -39,9 +39,9 @@ const AboutSection = () => {
             </h2>
           </div>
 
-          <div className="rounded-3xl bg-[#1a1624] border border-[#2f2838] p-8">
+          <div className="glass-panel rounded-3xl p-8 ring-1 ring-white/10">
             <p className="text-[#ADB7BE] text-lg leading-relaxed mb-6">
-              I am Anirudh Gangwar, an aspiring software developer who enjoys turning
+              I am Ranjit Kumar, an aspiring software developer who enjoys turning
               ideas into reliable, user-friendly web experiences. I focus on strong
               fundamentals, responsive UI, and consistent delivery.
             </p>
@@ -55,7 +55,7 @@ const AboutSection = () => {
             {quickFacts.map((fact, index) => (
               <div
                 key={index}
-                className="text-sm text-[#8892A0] px-4 py-3 rounded-full bg-[#0e0b14] border border-[#2f2838]/60"
+                className="text-sm text-[#8892A0] px-4 py-3 rounded-full glass-panel ring-1 ring-white/10"
               >
                 {fact}
               </div>
@@ -67,7 +67,7 @@ const AboutSection = () => {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-[#2f2838] bg-[#1a1624] p-6 flex gap-6"
+              className="rounded-2xl glass-panel p-6 flex gap-6 ring-1 ring-white/10"
             >
               <div className="text-primary-300 text-lg font-semibold">
                 {String(index + 1).padStart(2, "0")}

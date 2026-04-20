@@ -5,11 +5,11 @@ import Footer from "../components/Footer";
 const contactCards = [
   {
     title: "Email",
-    value: "gangwar.ag18@gmail.com",
+    value: "ranjitkumar01324@gmail.com",
   },
   {
     title: "Mobile",
-    value: "7240497240",
+    value: "9334500204",
   },
   {
     title: "Location",
@@ -37,7 +37,7 @@ export default function ContactUsPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-8">
+            <div className="glass-panel rounded-2xl p-8">
               <h2 className="text-2xl font-semibold text-white mb-3">Quick Note</h2>
               <p className="text-[#8892A0] leading-relaxed">
                 This site does not send messages directly. Please use email or phone
@@ -50,7 +50,7 @@ export default function ContactUsPage() {
             {contactCards.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#1a1624] border border-[#2f2838] rounded-2xl p-6"
+                className="glass-panel rounded-2xl p-6"
               >
                 <p className="text-[#8892A0] text-xs uppercase tracking-[0.3em]">
                   {item.title}

@@ -40,11 +40,11 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="relative pl-6 border-l border-[#2f2838] space-y-6">
+        <div className="relative pl-6 border-l border-white/10 space-y-6">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="rounded-2xl bg-[#1a1624] border border-[#2f2838] p-6"
+              className="glass-panel rounded-2xl p-6 ring-1 ring-white/10"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-8 h-8 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300 text-sm flex items-center justify-center">
